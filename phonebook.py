@@ -1,3 +1,5 @@
+import shutil
+
 #Вывод меню
 def show_menu():
     print("\nВыберите необходимое действие:\n"
@@ -126,12 +128,11 @@ def change_userdata(phonebook):
 #8 Сохранить справочник в текстовом формате
 def make_txt():
     filename = input("Введите имя файла для сохранения: ")
-    shutil.copyfile("phonebook.csv", f"{filename}.txt")
+    shutil.copyfile("phonebook.csv" f"{filename}.txt")
     
 #9 Закончить работу
 
-import shutil
-work_with_phonebook()
+
         
     
     
