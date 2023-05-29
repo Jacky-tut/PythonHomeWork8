@@ -1,6 +1,4 @@
-import shutil
-
-#Вывод меню
+# Вывод меню
 def show_menu():
     print("\nВыберите необходимое действие:\n"
           "1. Отобразить весь справочник\n"
@@ -15,7 +13,7 @@ def show_menu():
     choice = int(input())
     return choice
 
-#Перевод справочника из файла в список из словарей
+# Перевод справочника из файла в список из словарей
 def read_csv(filename):
     results = []
     fields = ["Фамилия", "Имя", "Телефон", "Описание"]
@@ -25,7 +23,7 @@ def read_csv(filename):
             results.append(record)
     return results
 
-#Выполняем работу с телефонной книгой в зависимости от пункта меню
+# Выполняем работу с телефонной книгой в зависимости от пункта меню
 def work_with_phonebook():
     choice = show_menu()
     phonebook = read_csv("phonebook.csv")
@@ -131,8 +129,8 @@ def make_txt():
     shutil.copyfile("phonebook.csv" f"{filename}.txt")
     
 #9 Закончить работу
-
-
+import shutil
+work_with_phonebook()
         
     
     
